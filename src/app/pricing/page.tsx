@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Navbar, Footer } from "@/components/layout";
 import { Check, ArrowRight, Zap, Users, Globe, ShieldCheck } from "lucide-react";
 import Link from "next/link";
-import { Badge } from "@/components/ui/Badge";
+import { Badge, Button } from "@/components/ui";
 
 const SHARED_FEATURES = [
   "Local execution on your device",
@@ -82,10 +82,10 @@ export default function PricingPage() {
                 ))}
               </div>
 
-              <button className="w-full py-4 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-bold rounded-2xl hover:opacity-90 transition-all flex items-center justify-center gap-2 group">
+              <Button className="w-full h-14 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 gap-2 group">
                 Download Now
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Button>
             </motion.div>
 
             {/* Teams Plan */}
@@ -120,10 +120,10 @@ export default function PricingPage() {
                 ))}
               </div>
 
-              <Link href="/contact" className="w-full py-4 bg-brand-primary text-white font-bold rounded-2xl shadow-lg shadow-brand-primary/20 hover:bg-brand-primary/90 transition-all flex items-center justify-center gap-2 group">
+              <Button href="/contact" className="w-full h-14 gap-2 group shadow-lg shadow-brand-primary/20">
                 Contact Sales
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </Button>
             </motion.div>
           </div>
 

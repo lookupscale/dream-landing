@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { SlackSimulation } from "./SlackSimulation";
-import { DreamTag } from "../../ui";
+import { DreamTag, Button } from "../../ui";
 import { SCENARIOS } from "../../../constants/landing-data";
 
 export const Hero = () => {
@@ -47,10 +47,10 @@ export const Hero = () => {
           transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
           className="text-lg md:text-2xl lg:text-3xl font-medium tracking-tight mb-12 text-zinc-900 dark:text-white"
         >
-          <span className="block mb-2">
-            Message <DreamTag /> in Slack like a coworker.
+          <span className="md:block md:mb-2">
+            Message <DreamTag /> in Slack like a coworker.{" "}
           </span>
-          <span className="block">
+          <span className="md:block">
             Dream uses your browser to
             <span className="underline decoration-brand-primary/30 underline-offset-8"> get real work done.</span>
           </span>

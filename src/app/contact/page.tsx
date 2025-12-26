@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Navbar, Footer } from "@/components/layout";
 import { ArrowRight, Send, CheckCircle2, Loader2 } from "lucide-react";
+import { Button } from "@/components/ui";
 
 export default function ContactPage() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -75,12 +76,13 @@ export default function ContactPage() {
                 <p className="text-zinc-500 dark:text-zinc-400 mb-8">
                   Thank you for reaching out. We'll be in touch soon.
                 </p>
-                <button 
+                <Button 
                   onClick={() => setStatus("idle")}
-                  className="px-6 py-3 bg-zinc-100 dark:bg-white/5 text-zinc-900 dark:text-white font-medium rounded-full hover:bg-zinc-200 dark:hover:bg-white/10 transition-all"
+                  variant="secondary"
+                  size="md"
                 >
                   Send another message
-                </button>
+                </Button>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -121,10 +123,10 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <button
+                <Button
                   disabled={status === "loading"}
                   type="submit"
-                  className="w-full py-5 bg-brand-primary text-white font-bold rounded-2xl flex items-center justify-center gap-3 shadow-lg shadow-brand-primary/20 hover:bg-brand-primary/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed group"
+                  className="w-full h-15 gap-3 shadow-premium shadow-brand-primary/20 group"
                 >
                   {status === "loading" ? (
                     <Loader2 className="w-5 h-5 animate-spin" />
@@ -134,7 +136,7 @@ export default function ContactPage() {
                       <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </>
                   )}
-                </button>
+                </Button>
 
                 {status === "error" && (
                   <p className="text-center text-red-500 text-sm font-medium">

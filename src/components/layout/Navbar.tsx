@@ -7,6 +7,8 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAV_LINKS } from "@/constants/navigation";
 
+import { Button } from "@/components/ui/Button";
+
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -60,9 +62,12 @@ export const Navbar = () => {
 
           {/* Right: Actions */}
           <div className="flex-1 flex justify-end items-center gap-4">
-            <button className="hidden sm:block px-5 py-2.5 bg-brand-primary text-white text-xs font-semibold rounded-full hover:bg-brand-primary/90 transition-all shadow-premium hover:shadow-premium-hover hover:-translate-y-0.5 active:translate-y-0">
+            <Button variant="outline" className="hidden sm:inline-flex">
+              Sign In
+            </Button>
+            <Button className="hidden sm:inline-flex">
               Download
-            </button>
+            </Button>
             
             {/* Mobile Menu Toggle */}
             <button 
@@ -107,11 +112,14 @@ export const Navbar = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: NAV_LINKS.length * 0.1 }}
-                className="pt-6 border-t border-zinc-100 dark:border-white/10"
+                className="pt-6 border-t border-zinc-100 dark:border-white/10 flex flex-col gap-4"
               >
-                <button className="w-full py-5 bg-brand-primary text-white font-bold rounded-2xl shadow-lg shadow-brand-primary/20 flex items-center justify-center gap-2 group">
+                <Button variant="outline" size="lg" className="w-full">
+                  Sign In
+                </Button>
+                <Button size="lg" className="w-full">
                   Download App
-                </button>
+                </Button>
               </motion.div>
             </div>
           </motion.div>
