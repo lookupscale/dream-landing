@@ -41,7 +41,7 @@ export const BrowserControl = () => {
                 <div className="w-3 h-3 rounded-full bg-[#27C93F]" />
               </div>
               <div className="flex-1 bg-white/50 dark:bg-black/40 rounded-md h-6 flex items-center px-3 text-xs text-zinc-500 dark:text-zinc-400 font-medium font-mono border border-zinc-200/50 dark:border-white/5">
-                salesforce.com/opportunities/acme-corp
+                salesforce.com
               </div>
             </div>
 
