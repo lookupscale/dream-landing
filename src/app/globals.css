@@ -3,8 +3,10 @@
 @theme {
   --color-brand-primary: #db3304;
   --color-brand-secondary: #a1a1aa;
-  --color-bg-dark: #09090b;
-  --color-bg-light: #18181b;
+  --color-light: #fefdfb;
+  --color-light-alt: #f5f5f3;
+  --color-dark: #1a1a1a;
+  --color-dark-alt: #0f0f0f;
   
   --font-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -19,9 +21,23 @@
 }
 
 body {
-  @apply bg-white dark:bg-black text-zinc-900 dark:text-white selection:bg-brand-primary/20 dark:selection:bg-white/20;
+  background-color: var(--color-light);
+  color: #18181b;
   margin: 0;
   overflow-x: hidden;
+}
+
+.dark body {
+  background-color: var(--color-dark);
+  color: #ffffff;
+}
+
+body ::selection {
+  background-color: rgba(219, 51, 4, 0.2);
+}
+
+.dark body ::selection {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 @layer base {

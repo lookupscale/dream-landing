@@ -9,7 +9,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-bg-dark text-zinc-900 dark:text-white selection:bg-brand-primary/20 dark:selection:bg-white/20">
+    <div className="min-h-screen text-zinc-900 dark:text-white selection:bg-brand-primary/20 dark:selection:bg-white/20">
       <Navbar />
       <Hero />
       <HowItWorks />

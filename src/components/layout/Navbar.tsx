@@ -34,7 +34,7 @@ export const Navbar = () => {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4",
           isScrolled || isMobileMenuOpen 
-            ? "bg-white/80 dark:bg-black/50 backdrop-blur-md border-b border-zinc-200 dark:border-white/10" 
+            ? "bg-light/80 dark:bg-dark/50 backdrop-blur-md border-b border-zinc-200 dark:border-white/10" 
             : "bg-transparent"
         )}
       >
@@ -88,7 +88,7 @@ export const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-white dark:bg-black pt-24 px-6 md:hidden"
+            className="fixed inset-0 z-40 bg-light dark:bg-dark pt-24 px-6 md:hidden"
           >
             <div className="flex flex-col gap-6">
               {NAV_LINKS.map((link, i) => (

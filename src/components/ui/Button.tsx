@@ -14,7 +14,7 @@ interface ButtonProps extends Omit<HTMLMotionProps<"button">, "children"> {
   href?: string;
 }
 
-const MotionLink = motion(Link);
+const MotionLink = motion.create(Link);
 
 export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
   ({ variant = "primary", size = "sm", children, className, href, ...props }, ref) => {

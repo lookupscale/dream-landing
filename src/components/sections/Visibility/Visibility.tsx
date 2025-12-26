@@ -7,7 +7,7 @@ import { VISIBILITY_ACTIVITIES } from "../../../constants/landing-data";
 
 export const Visibility = () => {
   return (
-    <section className="py-32 bg-zinc-50 dark:bg-zinc-950 border-none relative">
+    <section className="py-32 bg-light-alt dark:bg-dark-alt border-none relative">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         <motion.div 
           initial={{ opacity: 0, x: 20 }}
@@ -33,8 +33,8 @@ export const Visibility = () => {
           className="order-2 lg:order-1 relative"
         >
           <div className="absolute inset-x-0 -top-10 -bottom-10 bg-zinc-100/50 dark:bg-white/2 rounded-full blur-[100px] opacity-50 pointer-events-none" />
-          <div className="relative bg-white dark:bg-bg-dark border border-zinc-200 dark:border-white/10 rounded-2xl overflow-hidden shadow-premium">
-            <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-200 dark:border-white/5 bg-white dark:bg-zinc-900">
+          <div className="relative bg-light dark:bg-dark border border-zinc-200 dark:border-white/10 rounded-2xl overflow-hidden shadow-premium">
+            <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-200 dark:border-white/5 bg-light dark:bg-zinc-900">
               <div className="flex items-center gap-1.5">
                  <span className="text-zinc-400 font-medium text-lg">#</span>
                  <span className="text-sm font-bold text-zinc-900 dark:text-white">general</span>
@@ -44,7 +44,7 @@ export const Visibility = () => {
                 <span className="text-[10px] text-zinc-500 font-medium">Live</span>
               </div>
             </div>
-            <div className="p-4 space-y-5 bg-white dark:bg-zinc-900">
+            <div className="p-4 space-y-5 bg-light dark:bg-zinc-900">
               {VISIBILITY_ACTIVITIES.map((item, i) => (
                 <div key={i} className="flex gap-3 group">
                    <img src="/logo.png" className="w-9 h-9 rounded-lg shrink-0" />

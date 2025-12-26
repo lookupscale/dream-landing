@@ -7,7 +7,7 @@ import { SECURITY_FEATURES } from "../../../constants/landing-data";
 
 export const Security = () => {
   return (
-    <section className="py-32 bg-white dark:bg-black border-none relative">
+    <section className="py-32 bg-light dark:bg-dark border-none relative">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
            initial={{ opacity: 0, y: 30 }}
@@ -35,7 +35,7 @@ export const Security = () => {
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: i * 0.1, ease: [0.23, 1, 0.32, 1] }}
-              className="relative bg-white dark:bg-bg-dark p-8 rounded-2xl border border-zinc-200 dark:border-white/10 shadow-premium hover:shadow-premium-hover"
+              className="relative bg-light dark:bg-dark p-8 rounded-2xl border border-zinc-200 dark:border-white/10 shadow-premium hover:shadow-premium-hover"
             >
               <div className="w-12 h-12 bg-zinc-100 dark:bg-white/5 rounded-xl flex items-center justify-center mb-6">
                 <feature.icon className="w-6 h-6 text-zinc-900 dark:text-white stroke-[1.5]" />

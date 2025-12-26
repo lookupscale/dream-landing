@@ -6,7 +6,7 @@ import { HOW_IT_WORKS_STEPS } from "../../../constants/landing-data";
 
 export const HowItWorks = () => {
   return (
-    <section className="py-32 bg-zinc-50 dark:bg-black border-none relative z-10">
+    <section className="py-32 bg-light-alt dark:bg-dark-alt border-none relative z-10">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -31,7 +31,7 @@ export const HowItWorks = () => {
               transition={{ duration: 0.8, delay: i * 0.1, ease: [0.23, 1, 0.32, 1] }}
               className="relative flex flex-col items-center text-center group"
             >
-              <div className="w-24 h-24 rounded-4xl bg-white dark:bg-bg-dark border border-zinc-200 dark:border-white/10 flex items-center justify-center mb-8 shadow-premium group-hover:shadow-premium-hover group-hover:-translate-y-2 transition-all duration-500 z-10">
+              <div className="w-24 h-24 rounded-4xl bg-light dark:bg-dark border border-zinc-200 dark:border-white/10 flex items-center justify-center mb-8 shadow-premium group-hover:shadow-premium-hover group-hover:-translate-y-2 transition-all duration-500 z-10">
                 <item.icon className="w-8 h-8 text-zinc-900 dark:text-white stroke-[1.5]" />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-3">{item.title}</h3>

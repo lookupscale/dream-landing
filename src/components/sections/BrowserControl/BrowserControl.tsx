@@ -6,7 +6,7 @@ import { SectionHeader } from "../../ui/SectionHeader";
 
 export const BrowserControl = () => {
   return (
-    <section className="py-32 bg-white dark:bg-black relative">
+    <section className="py-32 bg-light dark:bg-dark relative">
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
         <motion.div
            initial={{ opacity: 0, y: 30 }}
@@ -32,7 +32,7 @@ export const BrowserControl = () => {
           className="w-full max-w-5xl relative"
         >
           <div className="absolute inset-x-0 -top-20 -bottom-20 bg-zinc-100/50 dark:bg-white/2 rounded-full blur-[120px] opacity-50 pointer-events-none" />
-          <div className="relative bg-white dark:bg-bg-dark border border-zinc-200 dark:border-white/10 rounded-2xl overflow-hidden shadow-premium">
+          <div className="relative bg-light dark:bg-dark border border-zinc-200 dark:border-white/10 rounded-2xl overflow-hidden shadow-premium">
             {/* Browser Header */}
             <div className="bg-zinc-100/80 dark:bg-white/5 backdrop-blur-md border-b border-zinc-200 dark:border-white/5 px-4 py-3 flex items-center gap-4 sticky top-0 z-40">
               <div className="flex gap-1.5">
@@ -40,7 +40,7 @@ export const BrowserControl = () => {
                 <div className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
                 <div className="w-3 h-3 rounded-full bg-[#27C93F]" />
               </div>
-              <div className="flex-1 bg-white/50 dark:bg-black/40 rounded-md h-6 flex items-center px-3 text-xs text-zinc-500 dark:text-zinc-400 font-medium font-mono border border-zinc-200/50 dark:border-white/5">
+              <div className="flex-1 bg-light/50 dark:bg-dark/40 rounded-md h-6 flex items-center px-3 text-xs text-zinc-500 dark:text-zinc-400 font-medium font-mono border border-zinc-200/50 dark:border-white/5">
                 salesforce.com
               </div>
             </div>
@@ -63,16 +63,16 @@ export const BrowserControl = () => {
               {/* Mock Form */}
               <div className="max-w-4xl space-y-6 md:space-y-8">
                 <div className="grid grid-cols-2 gap-4 md:gap-8">
-                  <div className="p-4 md:p-5 bg-white dark:bg-white/5 border border-zinc-200 dark:border-white/5 rounded-xl space-y-3">
+                  <div className="p-4 md:p-5 bg-light dark:bg-white/5 border border-zinc-200 dark:border-white/5 rounded-xl space-y-3">
                     <div className="w-16 md:w-24 h-4 bg-zinc-100 dark:bg-white/10 rounded" />
                     <div className="w-full max-w-[120px] h-6 bg-zinc-200 dark:bg-white/20 rounded" />
                   </div>
-                  <div className="p-4 md:p-5 bg-white dark:bg-white/5 border border-zinc-200 dark:border-white/5 rounded-xl space-y-3">
+                  <div className="p-4 md:p-5 bg-light dark:bg-white/5 border border-zinc-200 dark:border-white/5 rounded-xl space-y-3">
                     <div className="w-16 md:w-24 h-4 bg-zinc-100 dark:bg-white/10 rounded" />
                     <div className="w-full max-w-[100px] h-6 bg-zinc-200 dark:bg-white/20 rounded" />
                   </div>
                 </div>
-                <div className="p-4 md:p-5 bg-white dark:bg-white/5 border border-zinc-200 dark:border-white/5 rounded-xl space-y-3">
+                <div className="p-4 md:p-5 bg-light dark:bg-white/5 border border-zinc-200 dark:border-white/5 rounded-xl space-y-3">
                     <div className="w-24 md:w-32 h-4 bg-zinc-100 dark:bg-white/10 rounded" />
                     <div className="flex items-center gap-3">
                         <div className="px-3 py-1.5 bg-green-500/10 text-green-600 text-sm font-medium rounded border border-green-500/20">

@@ -36,7 +36,7 @@ export const Hero = () => {
   }, [step]);
 
   return (
-    <section ref={containerRef} className="relative min-h-[110vh] flex flex-col items-center justify-start pt-40 pb-32 overflow-hidden bg-white dark:bg-black text-zinc-900 dark:text-white">
+    <section ref={containerRef} className="relative min-h-[110vh] flex flex-col items-center justify-start pt-40 pb-32 overflow-hidden bg-transparent text-zinc-900 dark:text-white">
       {/* Background Gradient for soft transition */}
       <div className="absolute bottom-0 left-0 right-0 h-64 bg-linear-to-t from-zinc-50 dark:from-zinc-950 to-transparent pointer-events-none z-10" />
       

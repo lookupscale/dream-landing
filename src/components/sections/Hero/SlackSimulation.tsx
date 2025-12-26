@@ -18,9 +18,9 @@ export const SlackSimulation = ({ currentScenario, scenarioIndex, step }: SlackS
       transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
       className="w-full max-w-7xl mx-auto px-6 relative z-20"
     >
-      <div className="relative rounded-t-xl border border-zinc-200 dark:border-white/10 bg-white dark:bg-[#0c0c0c] shadow-2xl overflow-hidden ring-1 ring-zinc-200 dark:ring-white/5">
+      <div className="relative rounded-t-xl border border-zinc-200 dark:border-white/10 bg-light dark:bg-dark shadow-2xl overflow-hidden ring-1 ring-zinc-200 dark:ring-white/5">
           {/* Window Controls */}
-          <div className="h-10 border-b border-zinc-200 dark:border-white/5 flex items-center px-4 bg-zinc-50/80 dark:bg-[#0c0c0c]/80 backdrop-blur-md sticky top-0 z-30">
+          <div className="h-10 border-b border-zinc-200 dark:border-white/5 flex items-center px-4 bg-light-alt/80 dark:bg-dark/80 backdrop-blur-md sticky top-0 z-30">
              <div className="flex gap-2">
                 <div className="w-3 h-3 rounded-full bg-zinc-300 dark:bg-[#2c2c2c]" />
                 <div className="w-3 h-3 rounded-full bg-zinc-300 dark:bg-[#2c2c2c]" />
@@ -29,9 +29,9 @@ export const SlackSimulation = ({ currentScenario, scenarioIndex, step }: SlackS
           </div>
 
           {/* Content Area */}
-          <div className="aspect-3/4 md:aspect-16/10 bg-white dark:bg-[#111111] relative overflow-hidden flex">
+          <div className="aspect-3/4 md:aspect-16/10 bg-light dark:bg-dark relative overflow-hidden flex">
              {/* Sidebar */}
-             <div className="w-64 border-r border-zinc-200 dark:border-white/5 bg-zinc-50 dark:bg-[#0c0c0c] p-4 hidden md:block">
+             <div className="w-64 border-r border-zinc-200 dark:border-white/5 bg-light-alt dark:bg-dark-alt p-4 hidden md:block">
                 <div className="flex items-center gap-3 mb-6">
                    <img src="/slack-logo-dark.svg" className="h-5 w-auto brightness-0 dark:invert opacity-80" alt="Slack" />
                    <span className="font-semibold text-zinc-700 dark:text-zinc-300 text-sm">Workplace</span>
@@ -44,7 +44,7 @@ export const SlackSimulation = ({ currentScenario, scenarioIndex, step }: SlackS
              </div>
 
              {/* Chat Area */}
-             <div className="flex-1 flex flex-col bg-white dark:bg-[#111111] relative">
+             <div className="flex-1 flex flex-col bg-light dark:bg-dark relative">
                 {/* Messages */}
                 <div className="flex-1 p-8 space-y-8 min-h-[300px] md:min-h-[400px]">
                     {/* User Message */}
@@ -106,8 +106,8 @@ export const SlackSimulation = ({ currentScenario, scenarioIndex, step }: SlackS
                 </div>
 
                 {/* Input Area */}
-                <div className="p-4 border-t border-zinc-200 dark:border-white/5 bg-white dark:bg-[#111]">
-                   <div className="rounded border border-zinc-200 dark:border-white/10 bg-zinc-50 dark:bg-[#1a1a1a] h-10 flex items-center px-3 gap-2">
+                <div className="p-4 border-t border-zinc-200 dark:border-white/5 bg-light dark:bg-dark">
+                   <div className="rounded border border-zinc-200 dark:border-white/10 bg-light-alt dark:bg-dark h-10 flex items-center px-3 gap-2">
                       <div className="w-4 h-4 rounded-full border border-zinc-400 dark:border-zinc-600" />
                       <span className="text-zinc-400 dark:text-zinc-500 text-sm">Message #general...</span>
                    </div>
