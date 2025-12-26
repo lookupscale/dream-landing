@@ -34,7 +34,7 @@ export const Visibility = () => {
         >
           <div className="absolute inset-x-0 -top-10 -bottom-10 bg-zinc-100/50 dark:bg-white/2 rounded-full blur-[100px] opacity-50 pointer-events-none" />
           <div className="relative bg-light dark:bg-dark border border-zinc-200 dark:border-white/10 rounded-2xl overflow-hidden shadow-premium">
-            <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-200 dark:border-white/5 bg-light dark:bg-zinc-900">
+            <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-200 dark:border-white/5 bg-light dark:bg-dark">
               <div className="flex items-center gap-1.5">
                  <span className="text-zinc-400 font-medium text-lg">#</span>
                  <span className="text-sm font-bold text-zinc-900 dark:text-white">general</span>
@@ -44,7 +44,7 @@ export const Visibility = () => {
                 <span className="text-[10px] text-zinc-500 font-medium">Live</span>
               </div>
             </div>
-            <div className="p-4 space-y-5 bg-light dark:bg-zinc-900">
+            <div className="p-4 space-y-5 bg-light dark:bg-dark">
               {VISIBILITY_ACTIVITIES.map((item, i) => (
                 <div key={i} className="flex gap-3 group">
                    <img src="/logo.png" className="w-9 h-9 rounded-lg shrink-0" />

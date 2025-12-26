@@ -20,7 +20,7 @@ export const SlackSimulation = ({ currentScenario, scenarioIndex, step }: SlackS
     >
       <div className="relative rounded-t-xl border border-zinc-200 dark:border-white/10 bg-light dark:bg-dark shadow-2xl overflow-hidden ring-1 ring-zinc-200 dark:ring-white/5">
           {/* Window Controls */}
-          <div className="h-10 border-b border-zinc-200 dark:border-white/5 flex items-center px-4 bg-light-alt/80 dark:bg-dark/80 backdrop-blur-md sticky top-0 z-30">
+          <div className="h-10 border-b border-zinc-200 dark:border-white/5 flex items-center px-4 bg-light-alt/80 dark:bg-dark-alt/80 backdrop-blur-md sticky top-0 z-30">
              <div className="flex gap-2">
                 <div className="w-3 h-3 rounded-full bg-zinc-300 dark:bg-[#2c2c2c]" />
                 <div className="w-3 h-3 rounded-full bg-zinc-300 dark:bg-[#2c2c2c]" />
