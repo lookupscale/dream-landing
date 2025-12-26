@@ -5,7 +5,6 @@ import {
   BrowserControl, 
   Visibility, 
   Security, 
-  Connections 
 } from "@/components/sections";
 
 export default function Home() {
@@ -17,7 +16,6 @@ export default function Home() {
       <BrowserControl />
       <Visibility />
       <Security />
-      <Connections />
       <Footer />
     </div>
   );

@@ -3,4 +3,3 @@ export * from "./HowItWorks/HowItWorks";
 export * from "./BrowserControl/BrowserControl";
 export * from "./Visibility/Visibility";
 export * from "./Security/Security";
-export * from "./Connections/Connections";
