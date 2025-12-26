@@ -1,4 +1,4 @@
-import { Navbar, Footer } from "./components/layout";
+import { Navbar, Footer } from "@/components/layout";
 import { 
   Hero, 
   HowItWorks, 
@@ -6,9 +6,9 @@ import {
   Visibility, 
   Security, 
   Connections 
-} from "./components/sections";
+} from "@/components/sections";
 
-export default function App() {
+export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-bg-dark text-zinc-900 dark:text-white selection:bg-brand-primary/20 dark:selection:bg-white/20">
       <Navbar />

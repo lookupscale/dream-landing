@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Cloud, Check, MousePointer2 } from "lucide-react";
 import { SectionHeader } from "../../ui/SectionHeader";

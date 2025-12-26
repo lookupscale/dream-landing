@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { DreamTag } from "../../ui";
 import { HOW_IT_WORKS_STEPS } from "../../../constants/landing-data";
