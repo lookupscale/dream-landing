@@ -42,7 +42,7 @@ export default function PricingPage() {
               transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
             >
               <h1 className="text-4xl md:text-6xl font-medium tracking-tight mb-6">
-                Simple, transparent <span className="text-brand-primary font-bold">pricing.</span>
+                Start <span className="text-brand-primary font-bold">dreaming</span>
               </h1>
               <p className="text-lg md:text-xl text-zinc-500 dark:text-zinc-400 max-w-2xl mx-auto leading-relaxed">
                 Choose the plan that's right for you. Whether you're working solo or building the next big team.
