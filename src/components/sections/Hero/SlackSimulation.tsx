@@ -27,7 +27,7 @@ export const SlackSimulation = ({ currentScenario, scenarioIndex, step }: SlackS
           </div>
 
           {/* Content Area */}
-          <div className="aspect-3/4 md:aspect-16/10 bg-white dark:bg-[#111111] relative overflow-hidden flex font-helvetica">
+          <div className="aspect-3/4 md:aspect-16/10 bg-white dark:bg-[#111111] relative overflow-hidden flex">
              {/* Sidebar */}
              <div className="w-64 border-r border-zinc-200 dark:border-white/5 bg-zinc-50 dark:bg-[#0c0c0c] p-4 hidden md:block">
                 <div className="flex items-center gap-3 mb-6">
@@ -60,7 +60,7 @@ export const SlackSimulation = ({ currentScenario, scenarioIndex, step }: SlackS
                         <div className="space-y-1">
                            <div className="flex items-baseline gap-2">
                               <span className="text-zinc-900 dark:text-zinc-200 font-bold text-sm">{currentScenario.user}</span>
-                              <span className="text-zinc-500 dark:text-zinc-600 text-xs">Recently</span>
+                               <span className="text-zinc-500 dark:text-zinc-600 text-[11px] font-medium">Just now</span>
                            </div>
                            <p className="text-zinc-800 dark:text-zinc-300 text-sm leading-relaxed">
                               <span className="bg-brand-primary/10 text-brand-primary px-1 rounded-sm mr-1">@Dream</span>
@@ -80,9 +80,7 @@ export const SlackSimulation = ({ currentScenario, scenarioIndex, step }: SlackS
                             exit={{ opacity: 0, transition: { duration: 0.2 } }}
                             className="flex gap-4"
                           >
-                             <div className="w-9 h-9 rounded bg-zinc-100 dark:bg-white flex items-center justify-center shrink-0">
-                                <img src="/logo.png" className="w-6 h-6 rounded-sm" />
-                             </div>
+                             <img src="/logo.png" className="w-9 h-9 rounded-lg shrink-0" />
                              <div className="space-y-2 max-w-2xl w-full">
                                 <div className="flex items-baseline gap-2">
                                    <span className="text-zinc-900 dark:text-white font-bold text-sm">Dream</span>

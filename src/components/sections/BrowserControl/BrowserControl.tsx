@@ -6,20 +6,33 @@ export const BrowserControl = () => {
   return (
     <section className="py-32 bg-white dark:bg-black relative">
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
-        <SectionHeader 
-          centered
-          badge="Background Control"
-          badgeIcon={MousePointer2}
-          badgeClassName="bg-blue-500/10 text-blue-600 dark:text-blue-500"
-          title={<>Dream controls your<br /><span className="text-zinc-400 dark:text-zinc-600">browser in the background.</span></>}
-          description="It operates in the background, clicking buttons, filling forms, and navigating sites just like you would, freeing you up to focus on what matters."
-        />
+        <motion.div
+           initial={{ opacity: 0, y: 30 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
+        >
+          <SectionHeader 
+            centered
+            badge="Background Control"
+            badgeIcon={MousePointer2}
+            badgeClassName="bg-zinc-100 ring-zinc-200/50 text-zinc-900 dark:bg-white/5 dark:ring-white/10 dark:text-zinc-400"
+            title={<>Dream controls your browser<br /><span className="text-brand-primary font-bold">in the background.</span></>}
+            description="It operates in the background, clicking buttons, filling forms, and navigating sites just like you would, freeing you up to focus on what matters."
+          />
+        </motion.div>
 
-        <div className="w-full max-w-5xl relative">
-          <div className="absolute inset-0 bg-zinc-200/50 dark:bg-white/5 rounded-2xl blur-3xl opacity-50" />
-          <div className="relative bg-white dark:bg-[#09090b] border border-zinc-200 dark:border-white/10 rounded-xl overflow-hidden shadow-2xl">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.98, y: 40 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
+          className="w-full max-w-5xl relative"
+        >
+          <div className="absolute inset-x-0 -top-20 -bottom-20 bg-zinc-100/50 dark:bg-white/2 rounded-full blur-[120px] opacity-50 pointer-events-none" />
+          <div className="relative bg-white dark:bg-bg-dark border border-zinc-200 dark:border-white/10 rounded-2xl overflow-hidden shadow-premium">
             {/* Browser Header */}
-            <div className="bg-zinc-100/80 dark:bg-white/5 backdrop-blur-md border-b border-zinc-200 dark:border-white/5 px-4 py-3 flex items-center gap-4 sticky top-0 z-10">
+            <div className="bg-zinc-100/80 dark:bg-white/5 backdrop-blur-md border-b border-zinc-200 dark:border-white/5 px-4 py-3 flex items-center gap-4 sticky top-0 z-40">
               <div className="flex gap-1.5">
                 <div className="w-3 h-3 rounded-full bg-[#FF5F56]" />
                 <div className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
@@ -72,7 +85,7 @@ export const BrowserControl = () => {
 
               {/* Cursor Animation */}
               <motion.div
-                className="absolute z-50 pointer-events-none drop-shadow-2xl"
+                className="absolute z-30 pointer-events-none drop-shadow-2xl"
                 initial={{ x: "80%", y: "80%" }}
                 animate={{ x: "65%", y: "45%" }}
                 transition={{ 
@@ -87,7 +100,7 @@ export const BrowserControl = () => {
               </motion.div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

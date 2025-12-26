@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { Zap } from "lucide-react";
 import { cn } from "../../../lib/utils";
@@ -23,24 +24,35 @@ export const Connections = () => {
   return (
     <section className="py-32 bg-zinc-50 dark:bg-zinc-950 border-none relative">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-        <div>
+        <motion.div
+           initial={{ opacity: 0, x: -20 }}
+           whileInView={{ opacity: 1, x: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
+        >
           <SectionHeader 
             badge="Seamless Access"
             badgeIcon={Zap}
-            badgeClassName="bg-orange-500/10 text-orange-600 dark:text-orange-500"
-            title={<>One click to connect everything.<br /><span className="text-zinc-400 dark:text-zinc-600">One click to disconnect.</span></>}
+            badgeClassName="bg-zinc-100 ring-zinc-200/50 text-zinc-900 dark:bg-white/5 dark:ring-white/10 dark:text-zinc-400"
+            title={<>One click to connect everything.<br /><span className="text-brand-primary font-bold">One click to disconnect.</span></>}
             description="Grant Dream access to all your authenticated browser sessions instantly. Then, toggle individual services on or off to ensure Dream only accesses exactly what you want it to."
           />
-        </div>
+        </motion.div>
 
-        <div className="relative">
-           <div className="absolute inset-0 bg-zinc-200/50 dark:bg-white/5 rounded-2xl blur-3xl opacity-50" />
-           <div className="relative bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-white/10 rounded-2xl p-8 shadow-2xl">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, ease: [0.23, 1, 0.32, 1] }}
+          className="relative"
+        >
+           <div className="absolute inset-x-0 -top-10 -bottom-10 bg-zinc-100/50 dark:bg-white/2 rounded-full blur-[100px] opacity-50 pointer-events-none" />
+           <div className="relative bg-white dark:bg-bg-dark border border-zinc-200 dark:border-white/10 rounded-2xl p-8 shadow-premium">
               <p className="text-zinc-500 text-xs uppercase tracking-widest mb-6 font-medium">Connected Services</p>
               
               <div className="space-y-4">
                 {services.map((s) => (
-                  <div key={s.id} onClick={() => toggleConnection(s.id as keyof typeof connections)} className="flex items-center justify-between p-4 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-white/10 rounded-xl cursor-pointer hover:border-zinc-300 dark:hover:border-white/20 transition-all">
+                  <div key={s.id} onClick={() => toggleConnection(s.id as keyof typeof connections)} className="flex items-center justify-between p-4 bg-white dark:bg-bg-dark/50 border border-zinc-200 dark:border-white/10 rounded-xl cursor-pointer hover:border-brand-primary/30 dark:hover:border-brand-primary/30 transition-all group/item">
                     <div className="flex items-center gap-4">
                       <div className={`w-10 h-10 rounded-lg ${s.color} flex items-center justify-center text-white font-bold text-lg`}>{s.initial}</div>
                       <div>
@@ -49,7 +61,7 @@ export const Connections = () => {
                       </div>
                     </div>
                     
-                    <div className={cn("w-12 h-6 rounded-full p-1 transition-colors duration-300", connections[s.id as keyof typeof connections] ? "bg-green-500" : "bg-zinc-200 dark:bg-white/10")}>
+                    <div className={cn("w-12 h-6 rounded-full p-1 transition-colors duration-300", connections[s.id as keyof typeof connections] ? "bg-brand-primary" : "bg-zinc-200 dark:bg-white/10")}>
                       <div className={cn("w-4 h-4 rounded-full bg-white shadow-sm transition-transform duration-300", connections[s.id as keyof typeof connections] ? "translate-x-6" : "translate-x-0")} />
                     </div>
                   </div>
@@ -57,12 +69,12 @@ export const Connections = () => {
               </div>
 
               <div className="mt-6 pt-6 border-t border-zinc-200 dark:border-white/10 text-center">
-                <button className="text-sm font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-colors">
+                <button className="text-sm font-medium text-zinc-500 hover:text-zinc-900 dark:hover:white transition-colors">
                   + Add another service
                 </button>
               </div>
            </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

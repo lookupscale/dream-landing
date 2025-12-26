@@ -42,24 +42,27 @@ export const Hero = () => {
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-xl md:text-3xl font-helvetica font-medium tracking-tight mb-8 leading-[1.3] text-zinc-900 dark:text-white"
+          transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
+          className="text-lg md:text-2xl lg:text-3xl font-medium tracking-tight mb-12 text-zinc-900 dark:text-white"
         >
-          <span>
+          <span className="block mb-2">
             Message <DreamTag /> in Slack like a coworker.
-          </span><br />
-          <span>Dream uses the browser on your computer to <span className="whitespace-nowrap underline decoration-brand-primary/30 underline-offset-[6px]">get real work done.</span></span>
+          </span>
+          <span className="block">
+            Dream uses your browser to
+            <span className="underline decoration-brand-primary/30 underline-offset-8"> get real work done.</span>
+          </span>
         </motion.h1>
 
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.15, ease: [0.23, 1, 0.32, 1] }}
           className="flex flex-col items-start justify-start gap-4 text-left"
         >
-          <button className="px-8 py-4 bg-brand-primary text-white font-semibold rounded-full hover:bg-[#b02a03] transition-all text-sm flex items-center gap-3 shadow-[0_0_30px_-5px_rgba(219,51,4,0.4)] hover:shadow-[0_0_40px_-5px_rgba(219,51,4,0.6)] hover:scale-105 active:scale-95 group">
+          <button className="px-8 py-5 bg-brand-primary text-white font-semibold rounded-full hover:bg-brand-primary/90 transition-all text-base flex items-center gap-3 shadow-premium hover:shadow-premium-hover hover:-translate-y-1 active:scale-[0.98] group">
             <span>Download for macOS</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
           </button>
         </motion.div>
 
@@ -69,7 +72,7 @@ export const Hero = () => {
           transition={{ duration: 0.8 }}
           className="flex items-center justify-start gap-2 mt-8 mb-20"
         >
-          <span className="font-helvetica font-medium text-zinc-400 dark:text-zinc-500 text-base">Backed by</span>
+          <span className="font-medium text-zinc-400 dark:text-zinc-500 text-base">Backed by</span>
           <img src="/yc-logo-black.svg" alt="Y Combinator" className="h-5 dark:hidden" />
           <img src="/yc-logo-white.svg" alt="Y Combinator" className="h-5 hidden dark:block" />
         </motion.div>

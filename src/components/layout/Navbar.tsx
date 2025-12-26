@@ -20,11 +20,11 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img src="/logo.png" alt="DREAM Logo" className="w-8 h-8 rounded-lg" />
-          <span className="font-helvetica font-black text-xl tracking-tighter uppercase text-zinc-900 dark:text-white">DREAM</span>
+          <span className="font-black text-xl tracking-tighter uppercase text-zinc-900 dark:text-white">DREAM</span>
         </div>
         
         <div className="flex items-center gap-4">
-          <button className="px-5 py-2 bg-brand-primary text-white text-xs font-semibold rounded-full hover:bg-red-600 transition-all shadow-[0_0_20px_-5px_rgba(219,51,4,0.3)]">
+          <button className="px-5 py-2.5 bg-brand-primary text-white text-xs font-semibold rounded-full hover:bg-brand-primary/90 transition-all shadow-premium hover:shadow-premium-hover hover:-translate-y-0.5 active:translate-y-0">
             Download
           </button>
         </div>
