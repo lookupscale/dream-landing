@@ -12,11 +12,11 @@ export const Footer = () => {
         <div className="flex items-center gap-6">
              <Link href="/pricing" className="text-sm font-medium text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Pricing</Link>
              <Link href="/contact" className="text-sm font-medium text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Contact</Link>
-             <div className="flex items-center gap-3">
+             {/* <div className="flex items-center gap-3">
                   <span className="font-medium text-zinc-400 dark:text-zinc-500 text-sm">Backed by</span>
                   <img src="/yc-logo-black.svg" alt="Y Combinator" className="h-5 dark:hidden opacity-50 grayscale hover:grayscale-0 transition-all" />
                   <img src="/yc-logo-white.svg" alt="Y Combinator" className="h-5 hidden dark:block opacity-50 grayscale hover:grayscale-0 transition-all" />
-             </div>
+             </div> */}
         </div>
       </div>
       

@@ -60,7 +60,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15, ease: [0.23, 1, 0.32, 1] }}
-          className="flex flex-col items-start justify-start gap-4 text-left"
+          className="flex flex-col items-start justify-start gap-4 text-left mb-20"
         >
           <button className="px-8 py-5 bg-brand-primary text-white font-semibold rounded-full hover:bg-brand-primary/90 transition-all text-base flex items-center gap-3 shadow-premium hover:shadow-premium-hover hover:-translate-y-1 active:scale-[0.98] group">
             <span>Download for macOS</span>
@@ -68,7 +68,7 @@ export const Hero = () => {
           </button>
         </motion.div>
 
-        <motion.div 
+        {/* <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: .6, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -77,7 +77,7 @@ export const Hero = () => {
           <span className="font-medium text-zinc-400 dark:text-zinc-500 text-base">Backed by</span>
           <img src="/yc-logo-black.svg" alt="Y Combinator" className="h-5 dark:hidden" />
           <img src="/yc-logo-white.svg" alt="Y Combinator" className="h-5 hidden dark:block" />
-        </motion.div>
+        </motion.div> */}
       </motion.div>
 
       <div className="-mb-24 w-full flex justify-center relative z-10">
